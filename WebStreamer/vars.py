@@ -7,10 +7,6 @@ import requests
 
 load_dotenv()
 
-def get_ip():
-  resp=(requests.get("http://ifconfig.me/all.json")). json()
-    return resp.get("ip_addr", "0.0.0.0")
-
 
     class Var(object):
         MULTI_CLIENT = False
