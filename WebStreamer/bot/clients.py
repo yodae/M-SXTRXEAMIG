@@ -6,6 +6,14 @@ from ..vars import Var
 from pyrogram import Client
 from WebStreamer.utils import TokenParser
 from . import multi_clients, work_loads, StreamBot
+import socket
+
+# Obtener la dirección IP
+ip_address = socket.gethostbyname(socket.gethostname())
+
+# Escribir en el archivo config.env
+with open('config.env', 'a') as config_file:
+    config_file.write(f'FQDN={ip_address}\n')
 
 
 async def initialize_clients():
